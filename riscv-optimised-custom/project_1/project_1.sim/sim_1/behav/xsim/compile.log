@@ -1,0 +1,33 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Forwarding_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Forwarding_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/LU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_32bit
+WARNING: [VRFC 10-986] literal value truncated to fit in 32 bits [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu.v:37]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/hazard_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazard_detection_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/processor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module processor
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/sign_ext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_ext
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/project_1/project_1.srcs/sim_1/new/selection_sort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module selection_sort

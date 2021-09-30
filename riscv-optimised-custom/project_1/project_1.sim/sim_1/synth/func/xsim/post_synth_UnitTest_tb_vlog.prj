@@ -1,0 +1,22 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../RTL files/design srcs" \
+"post_synth_UnitTest_tb_func_synth.v" \
+"../../../../../../RTL files/design srcs/CSR.v" \
+"../../../../../../RTL files/design srcs/EX.v" \
+"../../../../../../RTL files/design srcs/Forwarding_unit.v" \
+"../../../../../../RTL files/design srcs/ID.v" \
+"../../../../../../RTL files/design srcs/IF.v" \
+"../../../../../../RTL files/design srcs/LU.v" \
+"../../../../../../RTL files/design srcs/MEM.v" \
+"../../../../../../RTL files/design srcs/WB.v" \
+"../../../../../../RTL files/design srcs/alu.v" \
+"../../../../../../RTL files/design srcs/alu_control.v" \
+"../../../../../../RTL files/design srcs/control_unit.v" \
+"../../../../../../RTL files/design srcs/hazard_detection_unit.v" \
+"../../../../../../RTL files/design srcs/processor.v" \
+"../../../../../../RTL files/design srcs/reg_file.v" \
+"../../../../../../RTL files/design srcs/sign_ext.v" \
+"../../../../../../RTL files/sim srcs/post_synth_UnitTest_tb.v" \
+
+# Do not sort compile order
+nosort

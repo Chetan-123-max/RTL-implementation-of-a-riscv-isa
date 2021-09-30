@@ -1,0 +1,22 @@
+00000000001000001000001010110011--->add r5,r1,r2-->r5=r1+r2
+00000000001100011000001100010011--->addi r6,r3,3-->r6=r3+$3
+10000111011001010100010100110111--->lui r10,554580-->store imm value(554580 in dec (or) 87654 in hx) in rd(10)
+00000000010100001010001110000011--->lw r7,5(r1)-->loads the value in the mem address 5+[r1] to the register r7
+00000000010100100001010110100011--->sw r5,11(r4)-->stores the value in register r5 to mem address 11+[r4]
+11111110000000011101110011100011--->bge r3,r0,AI-->Imm=-4-->goes 2 steps back
+
+
+Register values:
+R0=0
+R1=5
+R2=-4
+R3=10
+R4=12
+//after implementation
+R5=1(after add)
+R6=13(after addi)
+R7= 9(after lw)
+R10= -2023407616(after lui)
+
+
+//00000000000000001001010100010111--->auipc [add 9(imm) to the pc value and store in rd(10)]

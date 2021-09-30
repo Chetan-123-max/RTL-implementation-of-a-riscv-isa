@@ -1,0 +1,22 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+E:/capstone_dir/riscv-project-dev/RTL files/design srcs/CSR.v,1626200445,verilog,,E:/capstone_dir/riscv-project-dev/RTL files/design srcs/EX.v,E:/capstone_dir/riscv-project-dev/RTL files/design srcs/CSR_ADDR.vh,CSR,,,../../../../../../RTL files/design srcs,,,,,
+E:/capstone_dir/riscv-project-dev/RTL files/design srcs/CSR_ADDR.vh,1626197378,verilog,,,,,,,,,,,,
+E:/capstone_dir/riscv-project-dev/RTL files/design srcs/EX.v,1627980496,verilog,,E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Forwarding_unit.v,,EX,,,../../../../../../RTL files/design srcs,,,,,
+E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Forwarding_unit.v,1626197378,verilog,,E:/capstone_dir/riscv-project-dev/RTL files/design srcs/ID.v,,Forwarding_unit,,,../../../../../../RTL files/design srcs,,,,,
+E:/capstone_dir/riscv-project-dev/RTL files/design srcs/ID.v,1628153230,verilog,,E:/capstone_dir/riscv-project-dev/RTL files/design srcs/IF.v,,ID,,,../../../../../../RTL files/design srcs,,,,,
+E:/capstone_dir/riscv-project-dev/RTL files/design srcs/IF.v,1626197378,verilog,,E:/capstone_dir/riscv-project-dev/RTL files/design srcs/LU.v,,IF,,,../../../../../../RTL files/design srcs,,,,,
+E:/capstone_dir/riscv-project-dev/RTL files/design srcs/LU.v,1626197378,verilog,,E:/capstone_dir/riscv-project-dev/RTL files/design srcs/MEM.v,,LU,,,../../../../../../RTL files/design srcs,,,,,
+E:/capstone_dir/riscv-project-dev/RTL files/design srcs/MEM.v,1628011571,verilog,,E:/capstone_dir/riscv-project-dev/RTL files/design srcs/WB.v,,MEM,,,../../../../../../RTL files/design srcs,,,,,
+E:/capstone_dir/riscv-project-dev/RTL files/design srcs/WB.v,1626197378,verilog,,E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu.v,,WB,,,../../../../../../RTL files/design srcs,,,,,
+E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu.v,1626197378,verilog,,E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu_control.v,,ALU_32bit,,,../../../../../../RTL files/design srcs,,,,,
+E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu_control.v,1626197378,verilog,,E:/capstone_dir/riscv-project-dev/RTL files/design srcs/control_unit.v,,alu_control,,,../../../../../../RTL files/design srcs,,,,,
+E:/capstone_dir/riscv-project-dev/RTL files/design srcs/control_unit.v,1628074603,verilog,,E:/capstone_dir/riscv-project-dev/RTL files/design srcs/hazard_detection_unit.v,,control_unit,,,../../../../../../RTL files/design srcs,,,,,
+E:/capstone_dir/riscv-project-dev/RTL files/design srcs/hazard_detection_unit.v,1626197378,verilog,,E:/capstone_dir/riscv-project-dev/RTL files/design srcs/processor.v,,hazard_detection_unit,,,../../../../../../RTL files/design srcs,,,,,
+E:/capstone_dir/riscv-project-dev/RTL files/design srcs/processor.v,1628153609,verilog,,E:/capstone_dir/riscv-project-dev/RTL files/design srcs/reg_file.v,,processor,,,../../../../../../RTL files/design srcs,,,,,
+E:/capstone_dir/riscv-project-dev/RTL files/design srcs/reg_file.v,1626197379,verilog,,E:/capstone_dir/riscv-project-dev/RTL files/design srcs/sign_ext.v,,reg_file,,,../../../../../../RTL files/design srcs,,,,,
+E:/capstone_dir/riscv-project-dev/RTL files/design srcs/sign_ext.v,1628152614,verilog,,E:/capstone_dir/riscv-project-dev/RTL files/sim srcs/post_synth_UnitTest_tb.v,,sign_ext,,,../../../../../../RTL files/design srcs,,,,,
+E:/capstone_dir/riscv-project-dev/RTL files/sim srcs/post_synth_UnitTest_tb.v,1628013215,verilog,,,E:/capstone_dir/riscv-project-dev/RTL files/design srcs/CSR_ADDR.vh,post_synth_UnitTest_tb,,,../../../../../../RTL files/design srcs,,,,,
+E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/post_synth_UnitTest_tb_func_synth.v,1631605951,verilog,,E:/capstone_dir/riscv-project-dev/RTL files/design srcs/CSR.v,,Instruction_mem;SOC;data_mem;glbl;uart_tx,,,../../../../../../RTL files/design srcs,,,,,

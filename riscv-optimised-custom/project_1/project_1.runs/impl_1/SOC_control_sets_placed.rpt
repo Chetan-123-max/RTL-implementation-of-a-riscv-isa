@@ -1,0 +1,106 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Sep 30 15:32:28 2021
+| Host         : LAPTOP-JHDC8J70 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file SOC_control_sets_placed.rpt
+| Design       : SOC
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    28 |
+|    Minimum number of control sets                        |    28 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    80 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    28 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     5 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    18 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              83 |           32 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             366 |          134 |
+| Yes          | No                    | No                     |             145 |           62 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             118 |           35 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------------------------------+---------------------------------------------------+------------------+----------------+
+|  Clock Signal  |                    Enable Signal                    |                  Set/Reset Signal                 | Slice Load Count | Bel Load Count |
++----------------+-----------------------------------------------------+---------------------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG |                                                     |                                                   |                1 |              1 |
+|  clk1_BUFG     | processor/EX/CSR/LED_wr                             |                                                   |                1 |              1 |
+| ~clk1_BUFG     |                                                     |                                                   |                2 |              3 |
+|  clk1_BUFG     |                                                     | processor/EX/CSR/CSR_DATA_OUT[30]_i_1_n_0         |                1 |              4 |
+|  clk1_BUFG     |                                                     | processor/ID_EX[1]_tristate_oe[3]_i_1_n_0         |                2 |              4 |
+|  clk1_BUFG     |                                                     | processor/ID_EX[2]_tristate_oe[3]_i_1_n_0         |                2 |              4 |
+|  clk1_BUFG     | processor/ID/sign_ext/ID_EX_ctrl_reg[4]             | inst_mem/ID_EX_ctrl_reg[4]                        |                1 |              4 |
+| ~clk1_BUFG     | processor/EX/CSR/cause                              |                                                   |                2 |              5 |
+|  clk1_BUFG     |                                                     | processor/EX/CSR/ID_EX_ctrl_reg[4]_5              |                2 |             11 |
+|  clk1_BUFG     | processor/ID/E[0]                                   |                                                   |                6 |             15 |
+|  clk1_BUFG     |                                                     | processor/MEM_WB[1]_tristate_oe[31]_i_1_n_0       |                4 |             16 |
+|  clk1_BUFG     |                                                     | processor/EX/CSR/CSR_DATA_OUT[31]_i_1_n_0         |               17 |             24 |
+| ~clk1_BUFG     | processor/EX/CSR/cause                              | processor/EX/CSR/cause_ext[26]_i_1_n_0            |                9 |             27 |
+|  clk1_BUFG     |                                                     | processor/ID/IF_ID_register_reg[1]_tristate_oe[3] |               11 |             28 |
+|  clk1_BUFG     |                                                     | processor/ID/IF_ID_register_reg[0]_tristate_oe[3] |               15 |             28 |
+| ~clk1_BUFG     | processor/EX/CSR/exception_intr_address[29]_i_1_n_0 |                                                   |               17 |             30 |
+| ~clk1_BUFG     | processor/EX/CSR/trap_addr[29]_i_1_n_0              |                                                   |               11 |             30 |
+|  clk1_BUFG     |                                                     | processor/ID/IF_ID_CSR_reg[18]                    |                8 |             31 |
+|  clk1_BUFG     |                                                     | processor/EX/CSR/ID_EX_ctrl_reg[4]_6              |               10 |             32 |
+|  clk1_BUFG     | processor/IF/pc[31]_i_1_n_0                         | rst_IBUF                                          |               12 |             32 |
+|  clk1_BUFG     | processor/ID/sign_ext/ID_EX_ctrl_reg[4]             |                                                   |               10 |             32 |
+| ~clk1_BUFG     | processor/EX/CSR/MTVAL[31]_i_1_n_0                  |                                                   |               15 |             32 |
+|  clk1_BUFG     |                                                     | rst_IBUF                                          |               17 |             33 |
+|  clk1_BUFG     |                                                     | processor/ID/EX_MEM_register__0[0]                |               15 |             36 |
+|  clk1_BUFG     | processor/ID/sign_ext/ID_EX_ctrl_reg[4]             | processor/ID/ADDR_Misallign_reg_0                 |               13 |             55 |
+|  clk1_BUFG     |                                                     |                                                   |               29 |             79 |
+| ~clk1_BUFG     | processor/ID/reg_file/p_0_in__0                     |                                                   |               12 |             96 |
+|  clk1_BUFG     |                                                     | processor/ID/ADDR_Misallign_reg_0                 |               30 |            115 |
++----------------+-----------------------------------------------------+---------------------------------------------------+------------------+----------------+
+
+

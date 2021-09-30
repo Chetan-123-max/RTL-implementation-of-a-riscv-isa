@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Sep 30 15:31:48 2021
+# Process ID: 11132
+# Current directory: E:/capstone_dir/riscv-project-dev/project_1/project_1.runs/impl_1
+# Command line: vivado.exe -log SOC.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source SOC.tcl -notrace
+# Log file: E:/capstone_dir/riscv-project-dev/project_1/project_1.runs/impl_1/SOC.vdi
+# Journal file: E:/capstone_dir/riscv-project-dev/project_1/project_1.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source SOC.tcl -notrace

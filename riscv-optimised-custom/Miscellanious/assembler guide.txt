@@ -1,0 +1,24 @@
+Step 1: Install virtual environment
+            pip install virtualenv
+Step 2: Check installation
+            virtualenv --version
+Step 3: Create virtualenv
+		mkdir .virtualenv
+		cd .virtualenv
+		virtualenv rvi
+Step 4: Set permissions
+		cd \.virtualenv\rvi\Scripts
+		Set-ExecutionPolicy Unrestricted -Scope Process
+Step 5: Activate virtualenv
+		.\activate
+Step 6: Download RISCV-RV32I-Assembler-master from https://github.com/metastableB/RISCV-RV32I-Assembler.git
+Step 7: After downloading, navigate to the path containing 'requirements.txt' on the command prompt and type
+		pip install -r requirements.txt 
+Step 8: Create Result folder in the path ".\virtualenv\rvi\Scripts\"
+Step 9: Copy the 'src' and 'examples' folders from the downloaded directory and paste them in the newly created 'Result' folder. 
+Step 10: Navigate to Result folder on the command prompt
+Step 11: run the assembler 
+		python src\rvi.py examples\[ASSEMBLY_FILE.rvi] -o [OUTFILE_NAME]
+	After Step 11 the binary file should be stored in Result folder
+
+To exit the virtualenv type "deactivate" in the command prompt.

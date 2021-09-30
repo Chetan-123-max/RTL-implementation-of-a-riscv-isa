@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Sep 14 11:21:18 2021
+# Process ID: 6588
+# Current directory: E:/capstone_dir/riscv-project-dev/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15364 E:\capstone_dir\riscv-project-dev\project_1\project_1.xpr
+# Log file: E:/capstone_dir/riscv-project-dev/project_1/vivado.log
+# Journal file: E:/capstone_dir/riscv-project-dev/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/capstone_dir/riscv-project-dev/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top SOC [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open E:/capstone_dir/riscv-project-dev/project_1/project_1.srcs/sim_1/new/bubble_sort.v w ]
+add_files -fileset sim_1 E:/capstone_dir/riscv-project-dev/project_1/project_1.srcs/sim_1/new/bubble_sort.v
+update_compile_order -fileset sim_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation -mode post-synthesis -type functional
+source post_synth_UnitTest_tb.tcl
+close_sim

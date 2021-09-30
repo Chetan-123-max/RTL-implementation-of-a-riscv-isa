@@ -1,0 +1,720 @@
+
+*** Running vivado
+    with args -log SOC.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source SOC.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source SOC.tcl -notrace
+Command: synth_design -top SOC -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6280 
+WARNING: [Synth 8-2292] literal value truncated to fit in 32 bits [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu.v:37]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 978.785 ; gain = 239.180
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'SOC' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/SOC.v:22]
+	Parameter BOOT_ADDRESS bound to: 0 - type: integer 
+	Parameter CLKS_PER_BIT bound to: 260 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'processor' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/processor.v:2]
+	Parameter BOOT_ADDRESS bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'IF' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/IF.v:5]
+	Parameter BOOT_ADDRESS bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'IF' (1#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/IF.v:5]
+INFO: [Synth 8-6157] synthesizing module 'control_unit' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/control_unit.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (2#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/control_unit.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ID' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/ID.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/ID.v:106]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/ID.v:113]
+INFO: [Synth 8-6157] synthesizing module 'reg_file' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/reg_file.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'reg_file' (3#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/reg_file.v:2]
+INFO: [Synth 8-6157] synthesizing module 'sign_ext' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/sign_ext.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'sign_ext' (4#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/sign_ext.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ID' (5#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/ID.v:3]
+INFO: [Synth 8-6157] synthesizing module 'hazard_detection_unit' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/hazard_detection_unit.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'hazard_detection_unit' (6#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/hazard_detection_unit.v:3]
+INFO: [Synth 8-6157] synthesizing module 'EX' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/EX.v:3]
+INFO: [Synth 8-6157] synthesizing module 'alu_control' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu_control.v:3]
+INFO: [Synth 8-226] default block is never used [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu_control.v:11]
+INFO: [Synth 8-226] default block is never used [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu_control.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'alu_control' (7#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu_control.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ALU_32bit' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_32bit' (8#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu.v:3]
+INFO: [Synth 8-6157] synthesizing module 'CSR' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/CSR.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'CSR' (9#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/CSR.v:4]
+INFO: [Synth 8-226] default block is never used [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/EX.v:94]
+INFO: [Synth 8-6155] done synthesizing module 'EX' (10#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/EX.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Forwarding_unit' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Forwarding_unit.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Forwarding_unit' (11#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Forwarding_unit.v:3]
+INFO: [Synth 8-6157] synthesizing module 'MEM' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/MEM.v:3]
+INFO: [Synth 8-6157] synthesizing module 'LU' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/LU.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'LU' (12#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/LU.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'MEM' (13#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/MEM.v:3]
+INFO: [Synth 8-6157] synthesizing module 'WB' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/WB.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'WB' (14#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/WB.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'processor' (15#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/processor.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Instruction_mem' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:4]
+INFO: [Synth 8-3876] $readmem data file '../../../UnitTest-files/text_files/rv32ui-p-add.txt' is read successfully [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'Instruction_mem' (16#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:4]
+INFO: [Synth 8-6157] synthesizing module 'data_mem' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/data_mem.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'data_mem' (17#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/data_mem.v:4]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/uart_tx.v:1]
+	Parameter CLKS_PER_BIT bound to: 260 - type: integer 
+	Parameter s_IDLE bound to: 3'b000 
+	Parameter s_TX_START_BIT bound to: 3'b001 
+	Parameter s_TX_DATA_BITS bound to: 3'b010 
+	Parameter s_TX_STOP_BIT bound to: 3'b011 
+	Parameter s_CLEANUP bound to: 3'b100 
+WARNING: [Synth 8-6014] Unused sequential element r_Clock_Count_reg was removed.  [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/uart_tx.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (18#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/uart_tx.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bus_arbiter' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/bus_arbiter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'bus_arbiter' (19#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/bus_arbiter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'SOC' (20#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/SOC.v:22]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1041.012 ; gain = 301.406
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1041.012 ; gain = 301.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1041.012 ; gain = 301.406
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1041.012 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/capstone_dir/riscv-project-dev/project_1/project_1.srcs/constrs_1/new/constr.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk1' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [E:/capstone_dir/riscv-project-dev/project_1/project_1.srcs/constrs_1/new/constr.xdc:34]
+Finished Parsing XDC File [E:/capstone_dir/riscv-project-dev/project_1/project_1.srcs/constrs_1/new/constr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/capstone_dir/riscv-project-dev/project_1/project_1.srcs/constrs_1/new/constr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/SOC_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/SOC_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1177.410 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1177.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1177.410 ; gain = 437.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1177.410 ; gain = 437.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1177.410 ; gain = 437.805
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "is_fence" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "is_illegal_instr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Rb2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Rd0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "RegWrite" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "MemRead" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MemWrite" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "is_Branch" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "ALUOp1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ALUSrc1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "EX_res_select1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ALU_SEL1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/EX.v:129]
+INFO: [Synth 8-802] inferred FSM for state register 'r_SM_Main_reg' in module 'uart_tx'
+INFO: [Synth 8-3971] The signal "data_mem:/mem_ram_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_IDLE |                                0 |                              000
+          s_TX_START_BIT |                                1 |                              001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1177.410 ; gain = 437.805
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 4     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 7     
+	               31 Bit    Registers := 1     
+	               30 Bit    Registers := 2     
+	               27 Bit    Registers := 1     
+	               19 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 22    
++---RAMs : 
+	             128K Bit         RAMs := 1     
+	             1024 Bit         RAMs := 1     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 58    
+	   7 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 8     
+	   5 Input     32 Bit        Muxes := 2     
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 6     
+	   3 Input     30 Bit        Muxes := 1     
+	   4 Input     30 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 6     
+	  11 Input     12 Bit        Muxes := 1     
+	   4 Input     12 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 18    
+	   3 Input      5 Bit        Muxes := 3     
+	  11 Input      5 Bit        Muxes := 4     
+	   5 Input      5 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 4     
+	   3 Input      4 Bit        Muxes := 2     
+	  11 Input      4 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 1     
+	  20 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	  11 Input      3 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 1     
+	  11 Input      2 Bit        Muxes := 2     
+	  12 Input      2 Bit        Muxes := 3     
+	  13 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 35    
+	   3 Input      1 Bit        Muxes := 7     
+	  11 Input      1 Bit        Muxes := 4     
+	  12 Input      1 Bit        Muxes := 10    
+	   4 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module SOC 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module IF 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     12 Bit        Muxes := 1     
+	  11 Input     12 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 5     
+	   3 Input      5 Bit        Muxes := 3     
+	  11 Input      5 Bit        Muxes := 4     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	  11 Input      3 Bit        Muxes := 1     
+	  11 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 4     
+Module control_unit 
+Detailed RTL Component Info : 
++---Muxes : 
+	  12 Input      2 Bit        Muxes := 3     
+	  13 Input      2 Bit        Muxes := 2     
+	  12 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 2     
+Module reg_file 
+Detailed RTL Component Info : 
++---RAMs : 
+	             1024 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module sign_ext 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input     32 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 1     
+Module ID 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     30 Bit        Muxes := 2     
+	   3 Input     30 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module alu_control 
+Detailed RTL Component Info : 
++---Muxes : 
+	  11 Input      4 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 1     
+	  20 Input      4 Bit        Muxes := 1     
+Module ALU_32bit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 1     
+Module CSR 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               30 Bit    Registers := 2     
+	               27 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 7     
+Module EX 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 8     
+	   5 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+Module Forwarding_unit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module LU 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 7     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+Module WB 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module processor 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               19 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 22    
+	   4 Input     32 Bit        Muxes := 3     
+	   2 Input     30 Bit        Muxes := 3     
+	   4 Input     30 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 3     
+	   4 Input     12 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 13    
+	   4 Input      5 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 10    
+Module Instruction_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               31 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module data_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---RAMs : 
+	             128K Bit         RAMs := 1     
++---Muxes : 
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     12 Bit        Muxes := 1     
+Module uart_tx 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 7     
+Module bus_arbiter 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "is_fence" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "is_illegal_instr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Rd0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "RegWrite" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "MemRead" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MemWrite" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "is_Branch" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "EX_res_select1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3971] The signal "SOC/data_mem/mem_ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3886] merging instance 'processori_111' (FD) to 'processori_59'
+INFO: [Synth 8-3886] merging instance 'processori_109' (FDE) to 'processori_31'
+INFO: [Synth 8-3886] merging instance 'processor/ID_EX_CSR_tristate_oe_reg[7]' (FD) to 'processor/ID_EX_CSR_tristate_oe_reg[6]'
+INFO: [Synth 8-3886] merging instance 'IF_ID_reg[1]i_79' (FDE) to 'IF_ID_reg[1]i_76'
+INFO: [Synth 8-3886] merging instance 'IF_ID_reg[1]i_78' (FDE) to 'IF_ID_reg[1]i_76'
+INFO: [Synth 8-3886] merging instance 'IF_ID_reg[1]i_77' (FDE) to 'IF_ID_reg[1]i_76'
+INFO: [Synth 8-3886] merging instance 'processori_29' (FDE) to 'processori_31'
+INFO: [Synth 8-3886] merging instance 'processori_101' (FD) to 'processori_105'
+INFO: [Synth 8-3886] merging instance 'processor/IF_ID_reg[0][1]' (FDRE) to 'processor/IF_ID_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'processori_39' (FD) to 'processori_55'
+INFO: [Synth 8-3886] merging instance 'processori_25' (FD) to 'processori_55'
+INFO: [Synth 8-3886] merging instance 'processori_89' (FD) to 'processori_94'
+INFO: [Synth 8-3886] merging instance 'processori_97' (FD) to 'processori_94'
+INFO: [Synth 8-3886] merging instance 'EX_MEM_regi_67' (FD) to 'EX_MEM_regi_66'
+INFO: [Synth 8-3886] merging instance 'processori_55' (FD) to 'processori_47'
+INFO: [Synth 8-3886] merging instance 'processori_47' (FD) to 'processori_54'
+INFO: [Synth 8-3886] merging instance 'processori_38' (FD) to 'processori_54'
+INFO: [Synth 8-3886] merging instance 'processori_24' (FD) to 'processori_54'
+INFO: [Synth 8-3886] merging instance 'processori_88' (FD) to 'processori_94'
+INFO: [Synth 8-3886] merging instance 'processori_96' (FD) to 'processori_94'
+INFO: [Synth 8-3886] merging instance 'EX_MEM_regi_66' (FD) to 'EX_MEM_regi_65'
+INFO: [Synth 8-3886] merging instance 'processori_54' (FD) to 'processori_46'
+INFO: [Synth 8-3886] merging instance 'processori_46' (FD) to 'processori_53'
+INFO: [Synth 8-3886] merging instance 'processori_37' (FD) to 'processori_53'
+INFO: [Synth 8-3886] merging instance 'processori_23' (FD) to 'processori_53'
+INFO: [Synth 8-3886] merging instance 'processori_87' (FD) to 'processori_94'
+INFO: [Synth 8-3886] merging instance 'processori_95' (FD) to 'processori_94'
+INFO: [Synth 8-3886] merging instance 'EX_MEM_regi_65' (FD) to 'EX_MEM_regi_64'
+INFO: [Synth 8-3886] merging instance 'processori_53' (FD) to 'processori_45'
+INFO: [Synth 8-3886] merging instance 'processori_45' (FD) to 'processori_22'
+INFO: [Synth 8-3886] merging instance 'processori_36' (FD) to 'processori_22'
+INFO: [Synth 8-3886] merging instance 'processori_22' (FD) to 'processori_44'
+INFO: [Synth 8-3886] merging instance 'processori_86' (FD) to 'processori_94'
+INFO: [Synth 8-3886] merging instance 'processori_94' (FD) to 'processori_27'
+INFO: [Synth 8-3886] merging instance 'processori_52' (FD) to 'processori_44'
+INFO: [Synth 8-3886] merging instance 'processori_103' (FD) to 'processori_105'
+INFO: [Synth 8-3886] merging instance 'processori_81' (FD) to 'processori_27'
+INFO: [Synth 8-3886] merging instance 'processor/ID_EX_reg[0][1]' (FDR) to 'processor/ID_EX_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'processori_57' (FD) to 'processori_59'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart_tx/r_Tx_Done_reg )
+INFO: [Synth 8-3886] merging instance 'processor/ID/prev_instr_OP_reg[0]' (FD) to 'processor/ID/prev_instr_OP_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_71' (FD) to 'i_69'
+INFO: [Synth 8-3886] merging instance 'i_76' (FDE) to 'i_31'
+INFO: [Synth 8-3886] merging instance 'i_64' (FD) to 'i_99'
+INFO: [Synth 8-3886] merging instance 'i_107' (FD) to 'i_99'
+INFO: [Synth 8-3886] merging instance 'i_44' (FD) to 'i_105'
+INFO: [Synth 8-3886] merging instance 'i_105' (FD) to 'i_59'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 1177.410 ; gain = 437.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+--------------------+---------------+----------------+
+|Module Name | RTL Object         | Depth x Width | Implemented As | 
++------------+--------------------+---------------+----------------+
+|SOC         | inst_mem/instr_reg | 2048x31       | Block RAM      | 
++------------+--------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping	Report (see note below)
++------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object           | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|SOC         | data_mem/mem_ram_reg | 4 K x 32(NO_CHANGE)    | W |   | 4 K x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 4      | 
++------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++------------+-------------------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object                          | Inference | Size (Depth x Width) | Primitives   | 
++------------+-------------------------------------+-----------+----------------------+--------------+
+|SOC         | processor/ID/reg_file/registers_reg | Implied   | 32 x 32              | RAM32M x 12	 | 
++------------+-------------------------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4652] Swapped enable and write-enable on 4 RAM instances of RAM data_mem/mem_ram_reg to conserve power
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1177.410 ; gain = 437.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 1269.312 ; gain = 529.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object           | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|SOC         | data_mem/mem_ram_reg | 4 K x 32(NO_CHANGE)    | W |   | 4 K x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 4      | 
++------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping	Report
++------------+-------------------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object                          | Inference | Size (Depth x Width) | Primitives   | 
++------------+-------------------------------------+-----------+----------------------+--------------+
+|SOC         | processor/ID/reg_file/registers_reg | Implied   | 32 x 32              | RAM32M x 12	 | 
++------------+-------------------------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7053] The timing for the instance data_mem/mem_ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance data_mem/mem_ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance data_mem/mem_ram_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance data_mem/mem_ram_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance inst_mem/instr_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance inst_mem/instr_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 1269.312 ; gain = 529.707
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 1269.312 ; gain = 529.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 1269.312 ; gain = 529.707
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 1269.312 ; gain = 529.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 1269.312 ; gain = 529.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 1269.312 ; gain = 529.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 1269.312 ; gain = 529.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     2|
+|2     |CARRY4     |    44|
+|3     |LUT1       |     6|
+|4     |LUT2       |   278|
+|5     |LUT3       |   176|
+|6     |LUT4       |   257|
+|7     |LUT5       |   348|
+|8     |LUT6       |   795|
+|9     |RAM32M     |    12|
+|10    |RAMB36E1   |     1|
+|11    |RAMB36E1_1 |     3|
+|12    |RAMB36E1_2 |     1|
+|13    |RAMB36E1_3 |     1|
+|14    |FDRE       |   685|
+|15    |FDSE       |    28|
+|16    |IBUF       |     2|
+|17    |OBUF       |     4|
++------+-----------+------+
+
+Report Instance Areas: 
++------+---------------+----------------+------+
+|      |Instance       |Module          |Cells |
++------+---------------+----------------+------+
+|1     |top            |                |  2643|
+|2     |  data_mem     |data_mem        |    51|
+|3     |  inst_mem     |Instruction_mem |   103|
+|4     |  processor    |processor       |  2466|
+|5     |    EX         |EX              |   573|
+|6     |      CSR      |CSR             |   573|
+|7     |    ID         |ID              |    89|
+|8     |      reg_file |reg_file        |    22|
+|9     |      sign_ext |sign_ext        |    38|
+|10    |    IF         |IF              |   510|
+|11    |    WB         |WB              |    32|
+|12    |  uart_tx      |uart_tx         |     6|
++------+---------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 1269.312 ; gain = 529.707
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 1269.312 ; gain = 393.309
+Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:00:58 . Memory (MB): peak = 1269.312 ; gain = 529.707
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1281.227 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 62 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 18 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1281.227 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12 instances were transformed.
+  RAM32M => RAM32M (inverted pins: WCLK) (RAMD32(x6), RAMS32(x2)): 12 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+138 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:04 . Memory (MB): peak = 1281.227 ; gain = 831.207
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1281.227 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/capstone_dir/riscv-project-dev/project_1/project_1.runs/synth_1/SOC.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file SOC_utilization_synth.rpt -pb SOC_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 30 15:30:49 2021...

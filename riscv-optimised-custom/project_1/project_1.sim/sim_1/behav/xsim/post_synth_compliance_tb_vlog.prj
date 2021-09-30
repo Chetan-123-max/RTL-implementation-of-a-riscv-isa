@@ -1,0 +1,25 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../" \
+"../../../../../CSR.v" \
+"../../../../../EX.v" \
+"../../../../../Forwarding_unit.v" \
+"../../../../../ID.v" \
+"../../../../../IF.v" \
+"../../../../../LU.v" \
+"../../../../../MEM.v" \
+"../../../../../SU.v" \
+"../../../../../WB.v" \
+"../../../../../alu.v" \
+"../../../../../alu_control.v" \
+"../../../../../control_unit.v" \
+"../../../../../hazard_detection_unit.v" \
+"../../../../../processor.v" \
+"../../../../../reg_file.v" \
+"../../../../../sign_ext.v" \
+"../../../../project_1.srcs/sim_1/new/post_synth_compliance_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

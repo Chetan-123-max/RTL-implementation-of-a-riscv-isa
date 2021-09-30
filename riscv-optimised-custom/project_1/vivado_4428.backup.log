@@ -1,0 +1,750 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Sep 13 20:36:34 2021
+# Process ID: 4428
+# Current directory: E:/capstone_dir/riscv-project-dev/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19576 E:\capstone_dir\riscv-project-dev\project_1\project_1.xpr
+# Log file: E:/capstone_dir/riscv-project-dev/project_1/vivado.log
+# Journal file: E:/capstone_dir/riscv-project-dev/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/capstone_dir/riscv-project-dev/project_1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 871.934 ; gain = 235.000
+update_compile_order -fileset sources_1
+set_property top processor [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Sep 13 20:43:58 2021] Launched synth_1...
+Run output will be captured here: E:/capstone_dir/riscv-project-dev/project_1/project_1.runs/synth_1/runme.log
+set_property is_enabled false [get_files  E:/capstone_dir/riscv-project-dev/project_1/project_1.srcs/constrs_1/new/constr.xdc]
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1149.039 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 56 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1232.840 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12 instances were transformed.
+  RAM32M => RAM32M (inverted pins: WCLK) (RAMD32(x6), RAMS32(x2)): 12 instances
+
+open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1375.559 ; gain = 429.504
+close_design
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: processor
+WARNING: [Synth 8-2292] literal value truncated to fit in 32 bits [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu.v:37]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1916.480 ; gain = 81.594
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'processor' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/processor.v:2]
+	Parameter BOOT_ADDRESS bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'IF' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/IF.v:5]
+	Parameter BOOT_ADDRESS bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'IF' (1#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/IF.v:5]
+INFO: [Synth 8-6157] synthesizing module 'control_unit' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/control_unit.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (2#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/control_unit.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ID' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/ID.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/ID.v:106]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/ID.v:113]
+INFO: [Synth 8-6157] synthesizing module 'reg_file' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/reg_file.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'reg_file' (3#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/reg_file.v:2]
+INFO: [Synth 8-6157] synthesizing module 'sign_ext' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/sign_ext.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'sign_ext' (4#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/sign_ext.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ID' (5#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/ID.v:3]
+INFO: [Synth 8-6157] synthesizing module 'hazard_detection_unit' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/hazard_detection_unit.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'hazard_detection_unit' (6#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/hazard_detection_unit.v:3]
+INFO: [Synth 8-6157] synthesizing module 'EX' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/EX.v:3]
+INFO: [Synth 8-6157] synthesizing module 'alu_control' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu_control.v:3]
+INFO: [Synth 8-226] default block is never used [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu_control.v:11]
+INFO: [Synth 8-226] default block is never used [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu_control.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'alu_control' (7#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu_control.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ALU_32bit' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_32bit' (8#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu.v:3]
+INFO: [Synth 8-6157] synthesizing module 'CSR' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/CSR.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'CSR' (9#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/CSR.v:4]
+INFO: [Synth 8-226] default block is never used [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/EX.v:94]
+INFO: [Synth 8-6155] done synthesizing module 'EX' (10#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/EX.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Forwarding_unit' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Forwarding_unit.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Forwarding_unit' (11#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Forwarding_unit.v:3]
+INFO: [Synth 8-6157] synthesizing module 'MEM' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/MEM.v:3]
+INFO: [Synth 8-6157] synthesizing module 'LU' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/LU.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'LU' (12#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/LU.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'MEM' (13#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/MEM.v:3]
+INFO: [Synth 8-6157] synthesizing module 'WB' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/WB.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'WB' (14#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/WB.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'processor' (15#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/processor.v:2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1974.414 ; gain = 139.527
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1994.320 ; gain = 159.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1994.320 ; gain = 159.434
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1994.320 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2109.887 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2109.887 ; gain = 275.000
+38 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2109.887 ; gain = 275.000
+set_property top Instruction_mem [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Sep 13 20:48:12 2021] Launched synth_1...
+Run output will be captured here: E:/capstone_dir/riscv-project-dev/project_1/project_1.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2134.461 ; gain = 24.574
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Instruction_mem' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:4]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../../UnitTest-files/text_files/rv32ui-p-add.txt'; please make sure the file is added to project and has read permission, ignoring [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:11]
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+WARNING: [Synth 8-3848] Net instruction_memory in module/entity Instruction_mem does not have driver. [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:9]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'Instruction_mem' (1#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Instruction_mem.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2250.363 ; gain = 140.477
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2268.891 ; gain = 159.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2268.891 ; gain = 159.004
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.153 . Memory (MB): peak = 2269.207 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2270.875 ; gain = 160.988
+set_property top data_mem [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Sep 13 20:51:06 2021] Launched synth_1...
+Run output will be captured here: E:/capstone_dir/riscv-project-dev/project_1/project_1.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2321.660 ; gain = 44.027
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'data_mem' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/data_mem.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'data_mem' (1#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/data_mem.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2352.633 ; gain = 75.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2370.578 ; gain = 92.945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2370.578 ; gain = 92.945
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2370.578 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 2401.438 ; gain = 123.805
+refresh_design
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+set_property top uart_tx [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Sep 13 20:53:25 2021] Launched synth_1...
+Run output will be captured here: E:/capstone_dir/riscv-project-dev/project_1/project_1.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2490.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/uart_tx.v:1]
+	Parameter CLKS_PER_BIT bound to: 260 - type: integer 
+	Parameter s_IDLE bound to: 3'b000 
+	Parameter s_TX_START_BIT bound to: 3'b001 
+	Parameter s_TX_DATA_BITS bound to: 3'b010 
+	Parameter s_TX_STOP_BIT bound to: 3'b011 
+	Parameter s_CLEANUP bound to: 3'b100 
+WARNING: [Synth 8-6014] Unused sequential element r_Clock_Count_reg was removed.  [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/uart_tx.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (1#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/uart_tx.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2490.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2490.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2490.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2490.742 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 2511.668 ; gain = 20.926
+set_property top bus_arbiter [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Sep 13 20:57:10 2021] Launched synth_1...
+Run output will be captured here: E:/capstone_dir/riscv-project-dev/project_1/project_1.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2532.430 ; gain = 14.801
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bus_arbiter' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/bus_arbiter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'bus_arbiter' (1#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/bus_arbiter.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2532.430 ; gain = 14.801
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2532.434 ; gain = 14.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2532.434 ; gain = 14.805
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2532.434 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2547.070 ; gain = 29.441
+set_property top IF [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Sep 13 21:02:32 2021] Launched synth_1...
+Run output will be captured here: E:/capstone_dir/riscv-project-dev/project_1/project_1.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2568.418 ; gain = 15.516
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'IF' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/IF.v:5]
+	Parameter BOOT_ADDRESS bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'IF' (1#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/IF.v:5]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2568.418 ; gain = 15.516
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2568.680 ; gain = 15.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2568.680 ; gain = 15.777
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2568.680 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2568.680 ; gain = 15.777
+set_property top control_unit [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Sep 13 21:07:31 2021] Launched synth_1...
+Run output will be captured here: E:/capstone_dir/riscv-project-dev/project_1/project_1.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2568.680 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'control_unit' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/control_unit.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (1#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/control_unit.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2568.680 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2568.680 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2568.680 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2568.680 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 2568.680 ; gain = 0.000
+set_property top ID [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Sep 13 21:12:57 2021] Launched synth_1...
+Run output will be captured here: E:/capstone_dir/riscv-project-dev/project_1/project_1.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2568.680 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ID' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/ID.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/ID.v:106]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/ID.v:113]
+INFO: [Synth 8-6157] synthesizing module 'reg_file' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/reg_file.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'reg_file' (1#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/reg_file.v:2]
+INFO: [Synth 8-6157] synthesizing module 'sign_ext' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/sign_ext.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'sign_ext' (2#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/sign_ext.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ID' (3#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/ID.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2568.680 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2568.680 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2568.680 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2568.680 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 2568.680 ; gain = 0.000
+set_property top hazard_detection_unit [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Sep 13 21:17:03 2021] Launched synth_1...
+Run output will be captured here: E:/capstone_dir/riscv-project-dev/project_1/project_1.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2584.824 ; gain = 13.703
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'hazard_detection_unit' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/hazard_detection_unit.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'hazard_detection_unit' (1#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/hazard_detection_unit.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2584.824 ; gain = 13.703
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2584.844 ; gain = 13.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2584.844 ; gain = 13.723
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2584.844 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2585.746 ; gain = 14.625
+set_property top EX [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Sep 13 21:19:06 2021] Launched synth_1...
+Run output will be captured here: E:/capstone_dir/riscv-project-dev/project_1/project_1.runs/synth_1/runme.log
+refresh_design
+WARNING: [Synth 8-2292] literal value truncated to fit in 32 bits [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu.v:37]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2604.945 ; gain = 14.129
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'EX' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/EX.v:3]
+INFO: [Synth 8-6157] synthesizing module 'alu_control' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu_control.v:3]
+INFO: [Synth 8-226] default block is never used [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu_control.v:11]
+INFO: [Synth 8-226] default block is never used [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu_control.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'alu_control' (1#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu_control.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ALU_32bit' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_32bit' (2#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu.v:3]
+INFO: [Synth 8-6157] synthesizing module 'CSR' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/CSR.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'CSR' (3#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/CSR.v:4]
+INFO: [Synth 8-226] default block is never used [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/EX.v:94]
+INFO: [Synth 8-6155] done synthesizing module 'EX' (4#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/EX.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2604.945 ; gain = 14.129
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2604.945 ; gain = 14.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2604.945 ; gain = 14.129
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 2604.945 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 2 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 6 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 2604.945 ; gain = 14.129
+set_property top Forwarding_unit [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Sep 13 21:23:20 2021] Launched synth_1...
+Run output will be captured here: E:/capstone_dir/riscv-project-dev/project_1/project_1.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2604.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Forwarding_unit' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Forwarding_unit.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Forwarding_unit' (1#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Forwarding_unit.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2604.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2604.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2604.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2604.945 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 2604.945 ; gain = 0.000
+set_property top MEM [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Sep 13 21:25:19 2021] Launched synth_1...
+Run output will be captured here: E:/capstone_dir/riscv-project-dev/project_1/project_1.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2613.527 ; gain = 8.582
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'MEM' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/MEM.v:3]
+INFO: [Synth 8-6157] synthesizing module 'LU' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/LU.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'LU' (1#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/LU.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'MEM' (2#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/MEM.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2613.527 ; gain = 8.582
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2613.527 ; gain = 8.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2613.527 ; gain = 8.582
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2613.527 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2613.527 ; gain = 8.582
+set_property top WB [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Sep 13 21:27:32 2021] Launched synth_1...
+Run output will be captured here: E:/capstone_dir/riscv-project-dev/project_1/project_1.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2613.527 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'WB' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/WB.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'WB' (1#1) [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/WB.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2613.527 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2613.527 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2613.527 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2613.527 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 2613.527 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 13 21:29:33 2021...

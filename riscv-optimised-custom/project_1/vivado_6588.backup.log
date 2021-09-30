@@ -1,0 +1,409 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Sep 14 11:21:18 2021
+# Process ID: 6588
+# Current directory: E:/capstone_dir/riscv-project-dev/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15364 E:\capstone_dir\riscv-project-dev\project_1\project_1.xpr
+# Log file: E:/capstone_dir/riscv-project-dev/project_1/vivado.log
+# Journal file: E:/capstone_dir/riscv-project-dev/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/capstone_dir/riscv-project-dev/project_1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 864.773 ; gain = 222.523
+update_compile_order -fileset sources_1
+set_property top SOC [current_fileset]
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open E:/capstone_dir/riscv-project-dev/project_1/project_1.srcs/sim_1/new/bubble_sort.v w ]
+add_files -fileset sim_1 E:/capstone_dir/riscv-project-dev/project_1/project_1.srcs/sim_1/new/bubble_sort.v
+update_compile_order -fileset sim_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Sep 14 13:20:49 2021] Launched synth_1...
+Run output will be captured here: E:/capstone_dir/riscv-project-dev/project_1/project_1.runs/synth_1/runme.log
+launch_simulation -mode post-synthesis -type functional
+Command: launch_simulation -mode post-synthesis -type functional
+INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1182.035 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 62 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1266.309 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12 instances were transformed.
+  RAM32M => RAM32M (inverted pins: WCLK) (RAMD32(x6), RAMS32(x2)): 12 instances
+
+open_run: Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 1384.074 ; gain = 443.188
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-25] write_verilog -mode funcsim -nolib -force -file "E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/post_synth_UnitTest_tb_func_synth.v"
+INFO: [SIM-utils-36] Netlist generated:E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/post_synth_UnitTest_tb_func_synth.v
+INFO: [SIM-utils-54] Inspecting design source files for 'post_synth_UnitTest_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-srai.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-lh.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-slti.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-lui.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-lhu.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-and.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-andi.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-bne.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-lb.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-lw.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-bgeu.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-lbu.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-sltiu.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-beq.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-blt.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-sra.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-or.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-bltu.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-jalr.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-sub.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-xor.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-jal.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-sh.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-sltu.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-sw.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-bge.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-sll.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-ori.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-addi.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-add.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-srli.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-auipc.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-xori.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-sb.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-slli.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-slt.txt'
+INFO: [SIM-utils-43] Exported 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/rv32ui-p-srl.txt'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim'
+"xvlog --incr --relax -prj post_synth_UnitTest_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/post_synth_UnitTest_tb_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-311] analyzing module ID
+INFO: [VRFC 10-311] analyzing module IF
+INFO: [VRFC 10-311] analyzing module Instruction_mem
+INFO: [VRFC 10-311] analyzing module SOC
+INFO: [VRFC 10-311] analyzing module WB
+INFO: [VRFC 10-311] analyzing module data_mem
+INFO: [VRFC 10-311] analyzing module processor
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-311] analyzing module sign_ext
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'CSR' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/CSR.v:4]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'EX' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/EX.v:3]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/Forwarding_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Forwarding_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'ID' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/ID.v:3]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'IF' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/IF.v:5]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/LU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'WB' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/WB.v:3]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_32bit
+WARNING: [VRFC 10-986] literal value truncated to fit in 32 bits [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu.v:37]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/alu_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/hazard_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazard_detection_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/processor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module processor
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'processor' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/processor.v:2]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/reg_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'reg_file' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/reg_file.v:2]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/design srcs/sign_ext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_ext
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'sign_ext' [E:/capstone_dir/riscv-project-dev/RTL files/design srcs/sign_ext.v:3]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/capstone_dir/riscv-project-dev/RTL files/sim srcs/post_synth_UnitTest_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module post_synth_UnitTest_tb
+run_program: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1424.375 ; gain = 5.398
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim'
+"xelab -wto 4bd952e9d9c441cea20945721d96e025 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot post_synth_UnitTest_tb_func_synth xil_defaultlib.post_synth_UnitTest_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 4bd952e9d9c441cea20945721d96e025 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot post_synth_UnitTest_tb_func_synth xil_defaultlib.post_synth_UnitTest_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IF
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.sign_ext
+Compiling module xil_defaultlib.ID
+Compiling module xil_defaultlib.hazard_detection_unit
+Compiling module xil_defaultlib.alu_control
+Compiling module xil_defaultlib.ALU_32bit
+Compiling module xil_defaultlib.CSR
+Compiling module xil_defaultlib.EX
+Compiling module xil_defaultlib.Forwarding_unit
+Compiling module xil_defaultlib.LU
+Compiling module xil_defaultlib.MEM
+Compiling module xil_defaultlib.WB
+Compiling module xil_defaultlib.processor
+Compiling module xil_defaultlib.post_synth_UnitTest_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot post_synth_UnitTest_tb_func_synth
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim/xsim.dir/post_synth_UnitTest_tb_func_synth/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Sep 14 13:22:53 2021...
+run_program: Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 1819.887 ; gain = 395.477
+INFO: [USF-XSim-69] 'elaborate' step finished in '14' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/capstone_dir/riscv-project-dev/project_1/project_1.sim/sim_1/synth/func/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "post_synth_UnitTest_tb_func_synth -key {Post-Synthesis:sim_1:Functional:post_synth_UnitTest_tb} -tclbatch {post_synth_UnitTest_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source post_synth_UnitTest_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Wavedata 42-489] Can't add object "/post_synth_UnitTest_tb/mem_ram" to the wave window because it has 1048576 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/post_synth_UnitTest_tb/instruction_memory" to the wave window because it has 131072 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+# run 1ms
+Test Started......
+
+Running...            ../../../../../../UnitTest-files/text_files/rv32ui-p-add.txt...
+
+Test passed!
+
+
+Running...           ../../../../../../UnitTest-files/text_files/rv32ui-p-addi.txt...
+
+Test passed!
+
+
+Running...            ../../../../../../UnitTest-files/text_files/rv32ui-p-and.txt...
+
+Test passed!
+
+
+Running...           ../../../../../../UnitTest-files/text_files/rv32ui-p-andi.txt...
+
+Test passed!
+
+
+Running...          ../../../../../../UnitTest-files/text_files/rv32ui-p-auipc.txt...
+
+Test passed!
+
+
+Running...            ../../../../../../UnitTest-files/text_files/rv32ui-p-beq.txt...
+
+Test passed!
+
+
+Running...            ../../../../../../UnitTest-files/text_files/rv32ui-p-bge.txt...
+
+Test passed!
+
+
+Running...           ../../../../../../UnitTest-files/text_files/rv32ui-p-bgeu.txt...
+
+Test passed!
+
+
+Running...            ../../../../../../UnitTest-files/text_files/rv32ui-p-blt.txt...
+
+Test passed!
+
+
+Running...           ../../../../../../UnitTest-files/text_files/rv32ui-p-bltu.txt...
+
+Test passed!
+
+
+Running...            ../../../../../../UnitTest-files/text_files/rv32ui-p-bne.txt...
+
+Test passed!
+
+
+Running...            ../../../../../../UnitTest-files/text_files/rv32ui-p-jal.txt...
+
+Test passed!
+
+
+Running...           ../../../../../../UnitTest-files/text_files/rv32ui-p-jalr.txt...
+
+Test passed!
+
+
+Running...             ../../../../../../UnitTest-files/text_files/rv32ui-p-lb.txt...
+
+Test passed!
+
+
+Running...            ../../../../../../UnitTest-files/text_files/rv32ui-p-lbu.txt...
+
+Test passed!
+
+
+Running...             ../../../../../../UnitTest-files/text_files/rv32ui-p-lh.txt...
+
+Test passed!
+
+
+Running...            ../../../../../../UnitTest-files/text_files/rv32ui-p-lhu.txt...
+
+Test passed!
+
+
+Running...            ../../../../../../UnitTest-files/text_files/rv32ui-p-lui.txt...
+
+Test passed!
+
+
+Running...             ../../../../../../UnitTest-files/text_files/rv32ui-p-lw.txt...
+
+Test passed!
+
+
+Running...             ../../../../../../UnitTest-files/text_files/rv32ui-p-or.txt...
+
+Test passed!
+
+
+Running...            ../../../../../../UnitTest-files/text_files/rv32ui-p-ori.txt...
+
+Test passed!
+
+
+Running...             ../../../../../../UnitTest-files/text_files/rv32ui-p-sb.txt...
+
+Test passed!
+
+
+Running...             ../../../../../../UnitTest-files/text_files/rv32ui-p-sh.txt...
+
+Test passed!
+
+
+Running...            ../../../../../../UnitTest-files/text_files/rv32ui-p-sll.txt...
+
+Test passed!
+
+
+Running...           ../../../../../../UnitTest-files/text_files/rv32ui-p-slli.txt...
+
+Test passed!
+
+
+Running...            ../../../../../../UnitTest-files/text_files/rv32ui-p-slt.txt...
+
+Test passed!
+
+
+Running...           ../../../../../../UnitTest-files/text_files/rv32ui-p-slti.txt...
+
+Test passed!
+
+
+Running...          ../../../../../../UnitTest-files/text_files/rv32ui-p-sltiu.txt...
+
+Test passed!
+
+
+Running...           ../../../../../../UnitTest-files/text_files/rv32ui-p-sltu.txt...
+
+Test passed!
+
+
+Running...             ../../../../../../UnitTest-files/text_files/rv32ui-p-sw.txt...
+
+Test passed!
+
+
+Running...            ../../../../../../UnitTest-files/text_files/rv32ui-p-sra.txt...
+
+Test passed!
+
+
+Running...           ../../../../../../UnitTest-files/text_files/rv32ui-p-srai.txt...
+
+Test passed!
+
+
+Running...            ../../../../../../UnitTest-files/text_files/rv32ui-p-srl.txt...
+
+Test passed!
+
+
+Running...           ../../../../../../UnitTest-files/text_files/rv32ui-p-srli.txt...
+
+Test passed!
+
+
+Running...            ../../../../../../UnitTest-files/text_files/rv32ui-p-sub.txt...
+
+Test passed!
+
+
+Running...            ../../../../../../UnitTest-files/text_files/rv32ui-p-xor.txt...
+
+Test passed!
+
+
+Running...           ../../../../../../UnitTest-files/text_files/rv32ui-p-xori.txt...
+
+Test passed!
+
+
+Test Finished!!
+$finish called at time : 146770 ns : File "E:/capstone_dir/riscv-project-dev/RTL files/sim srcs/post_synth_UnitTest_tb.v" Line 223
+xsim: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1879.414 ; gain = 49.855
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'post_synth_UnitTest_tb_func_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1ms
+launch_simulation: Time (s): cpu = 00:00:48 ; elapsed = 00:00:45 . Memory (MB): peak = 1879.414 ; gain = 938.527
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 2424.191 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 14 15:00:33 2021...
